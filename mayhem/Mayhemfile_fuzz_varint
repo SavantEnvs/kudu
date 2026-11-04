@@ -1,0 +1,9 @@
+project: savantenvs/kudu
+target: fuzz_varint
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_varint/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_varint
+    libfuzzer: true
+    timeout: 10

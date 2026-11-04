@@ -1,0 +1,9 @@
+project: savantenvs/kudu
+target: fuzz_numbers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_numbers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_numbers
+    libfuzzer: true
+    timeout: 10
