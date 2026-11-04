@@ -1,0 +1,9 @@
+project: savantenvs/kudu
+target: fuzz_rle
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rle/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rle
+    libfuzzer: true
+    timeout: 10
